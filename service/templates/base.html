@@ -1,0 +1,35 @@
+{% extends "bootstrap/base.html" %}
+
+
+{% block styles %}
+    {{super()}}
+{% endblock %}
+
+
+{% block scripts %}
+    {{super()}}
+{% endblock %}
+
+
+
+
+{% block content %}
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Message Service</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li {%if page=='home'%}class="active"{%endif%}><a href="/">Home</a></li>
+      <li {%if page=='store'%}class="active"{%endif%}><a href="/store">Store</a></li>
+      <li {%if page=='read'%}class="active"{%endif%}><a href="/read">Read</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+   {% block page_content %}{% endblock %}
+</div>
+
+
+{% endblock %}

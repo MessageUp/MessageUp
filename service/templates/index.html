@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+
+
+{% block styles %}
+    {{super()}}
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+{% endblock %}
+
+
+{% block title %}Message Service{% endblock %}
+
+
+
+
+{% block page_content %}
+    {{ super() }}
+<h3>Welcome to The Message Service</h3>
+<p>You can store messages and read them later!</p>
+<p>Our code is 100% secure. Check it out at: https://github.com/MessageUp/MessageUp</p>
+
+{% endblock %}
